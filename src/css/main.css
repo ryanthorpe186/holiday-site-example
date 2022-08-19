@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Be Vietnam Pro', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+input {
+    margin-top: 0.75rem;
+    width: 100%;
+    padding-bottom: 0.75rem;
+}
+
+.input-box {
+    border-bottom: 1px solid #000;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+.input-box {
+    &:hover {
+        border-color: #ff5f18;
+
+        .icon, input {
+            color: #ff5f18;
+        }
+    }
+}
+
+.button {
+    background-color: #000;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: ease-in-out 0.25s;
+
+    &:hover {
+        background-color: #515151;
+    }
+
+    svg {
+        margin-left: 0.3em;
+        transition: ease-in-out 0.25s;
+    }
+
+    &:hover > svg {
+        transform: translateX(0.35rem);
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.969rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+
+    .logo {
+        width: 25%;
+        font-family: 'Be Vietnam Pro', serif;
+        font-weight: bold;
+    }
+
+    .logo, nav ul li a {
+        color: #fff;
+    }
+
+    nav {
+        width: 75%;
+
+        ul {
+            list-style: none;
+
+            li {
+                padding-left: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            .login-box {
+                position: absolute;
+                top: 2.5rem;
+                width: 23rem;
+                min-height: 12rem;
+                background-color: #fff;
+                border-radius: 1rem;
+                box-shadow: #0000005e 0.2rem 1rem 1rem;
+                padding: 1.3rem;
+                margin-left: -3rem;
+            }
+        }
+    }
+    
+    .button {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 84vh;
+    background-image: url('../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0rem -58.5rem;
+    color: #fff;
+
+    .hero-content {
+        width: 33rem;
+
+        .heading {
+            font-weight: bold;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px #000;
+        }
+
+        .button {
+            max-width: 8rem;
+        }
+
+        .button.top-margin {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.filters-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .filter {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 4rem;
+
+        .search-button {
+            width: 3rem;
+            height: 3rem;
+            background-color: #000;
+            border-radius: 100%;
+            color: #fff;
+
+            svg {
+                vertical-align: middle;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: #ff5f18;
+            }
+        }
+    }
+}
+
+.input-box, input, .icon, .search-button {
+    transition: ease-in-out 0.25s;
+}

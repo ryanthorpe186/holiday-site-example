@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome | Holiday Finder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Holiday finder, the place to find your perfect holiday!">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700">
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <div class="container flex-container items-center">
+                    <a href="/" class="logo">
+                        Holiday Finder
+                    </a>
+
+                    <nav>
+                        <ul class="flex-container">
+                            <li>
+                                <a href="/find-your-holiday">
+                                    Find Your Holiday
+                                </a>
+                            </li>
+                                
+                            <li>
+                                <a href="/popular-locations">
+                                    Popular Locations
+                                </a>
+                            </li>
+
+                            <li class="relative" x-data="{ open: false }">
+                                <a href="#" @click="open = !open">
+                                    Log In
+                                </a>
+
+                                <div class="login-box flex-container flex-col justify-space-around" x-show="open" x-transition>
+                                    <div class="input-box flex-container items-center">
+                                        <div class="icon"><i class="fa-solid fa-user"></i></div>
+                                        <input type="text" placeholder="Username" required />
+                                    </div>
+
+                                    <div class="input-box flex-container items-center">
+                                        <div class="icon"><i class="fa-solid fa-key"></i></div>
+                                        <input type="text" placeholder="Password" required />
+                                    </div>
+
+                                    <button class="button">Login</button>
+                                </div>
+                                
+                            </li>
+
+                            <li>
+                                <a href="/register" class="button">
+                                    Create an Account <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="hero-section">
+                <div class="container flex-container h-full items-center">
+
+                    <div class="flex-container flex-col hero-content w-75">
+                        <h1 class="heading">
+                            Ready to find your next dream holiday?
+                        </h1>
+
+                        <a href="/find-your-holiday" class="button top-margin">
+                            Get Started <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="filters-section">
+                <div class="container h-full">
+  
+                        <div class="flex-container w-full h-full items-center">
+                            <div class="filter flex-1">
+                                <div>
+                                    Location
+                                </div>
+
+                                <div class="input-box flex-container items-center">
+                                    <div class="icon"><i class="fa-solid fa-location-arrow"></i></div>
+                                    <input type="text" placeholder="Enter a location" value="San Marino" />
+                                </div>
+                            </div>
+                            
+                            <div class="filter flex-1">
+                                <div>
+                                    Nights
+                                </div>
+
+                                <div class="input-box flex-container items-center">
+                                    <div class="icon"><i class="fa-solid fa-bed"></i></div>
+                                    <input type="number" placeholder="Number of nights" value="1" />
+                                </div>
+                            </div>
+                            
+                            <div class="filter flex-1">
+                                <div>
+                                    People
+                                </div>
+
+                                <div class="input-box flex-container items-center">
+                                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                                    <input type="number" placeholder="Number of people" min="1" value="2" />
+                                </div>
+                            </div>
+
+                            <div class="filter flex-container flex-col justify-end">
+                                <button class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
